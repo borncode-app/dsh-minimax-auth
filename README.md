@@ -1,3 +1,23 @@
+> **This repository has moved into one monorepo.**
+>
+> The whole MiniMax set — the credit proxy, the daily check-in, the model-list
+> sync, the composer quota chip, the MiniMax Code bridge, and the shared grant
+> reader — now lives in
+> **[`borncode-app/dsh-minimax-kit`](https://github.com/borncode-app/dsh-minimax-kit)**,
+> one repository with one Plugins entry.
+>
+> | this repo | new home |
+> |---|---|
+> | `dsh-minimax-auth` | `packages/dsh-minimax-auth` |
+> | `dsh-minimax-credit` | `packages/dsh-minimax-credit` |
+> | `dsh-minimax-checkin` | `packages/dsh-minimax-checkin` |
+> | `dsh-minimax-model-sync` | `packages/dsh-minimax-model-sync` |
+> | `dsh-minimax-bridge` | `packages/dsh-minimax-bridge` |
+> | `dsh-model-quota` | `packages/dsh-model-quota` |
+>
+> The code and its history are unchanged; only the repository is shared. Install
+> `dsh-minimax-kit` instead of the individual bundles. This repository stays
+> open so the old links keep working.
 # dsh-minimax-auth
 
 The MiniMax Code OAuth grant reader and refresher, shared by
@@ -34,7 +54,7 @@ A plugin keeps its own error class and code prefix:
 ```js
 import { MinimaxCodeAuth } from '@local/dsh-minimax-auth'
 
-export class WidgetUnavailableError extends Error { /* … */ }
+export class WidgetUnavailableError extends Error { /* â€¦ */ }
 
 class WidgetAuth extends MinimaxCodeAuth {
   constructor(options) {
